@@ -2,7 +2,7 @@
 
 This project aims to develop a stock market portfolio management system with features such as user registration and login, stock portfolio management, an email notification system, and more. The app will utilize Node.js, and PostgreSQL for the backend and a free and open stock market API to retrieve stock price information. The project follows coding standards such as a coding style guide, using a linter, writing unit tests, and proper documentation.
 
-See API documentation: rushipvaghasiya.github.io/PortfolioPal/docs/api
+See [API documentation](https://rushipvaghasiya.github.io/PortfolioPal/docs/api)
 
 ## Prerequisites
 
