@@ -1,0 +1,31 @@
+{
+    "addTrigger": {
+        "type": "object",
+        "required": [
+            "category",
+            "alertPrice"
+        ],
+        "properties": {
+            "category": {
+                "type": "string",
+                "enum": ["High", "Low"]
+            },
+            "alertPrice": {
+                "type": "integer",
+                "example": 130
+            }
+        }
+    },
+    "addStock": {
+        "type": "object",
+        "required": [
+            "companyName"
+        ],
+        "properties": {
+            "companyName": {
+                "type": "string",
+                "example": "AMERICAFIRST QUANTITATIVE STRATEGIES FUND CLASS C"
+            }
+        }
+    }
+}

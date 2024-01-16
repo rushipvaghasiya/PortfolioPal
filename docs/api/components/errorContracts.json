@@ -1,0 +1,52 @@
+{
+  "ValidationErrorResponse": {
+    "type": "object",
+    "properties": {
+      "code": {
+        "type": "string",
+        "description": "Error code"
+      },
+      "message": {
+        "type": "string",
+        "description": "Error message"
+      },
+      "errors": {
+        "type": "array",
+        "description": "List of validation errors",
+        "items": {
+          "properties": {
+            "location": {
+              "type": "string",
+              "description": "Error location (i.e. 'headers', 'body', 'query', 'params', 'cookies')"
+            },
+            "messages": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "List of errors for the given field"
+              }
+            },
+            "field": {
+              "type": "string",
+              "description": "Field name"
+            }
+
+          }
+        }
+      }
+    }
+  },
+  "ErrorResponse": {
+    "type": "object",
+    "properties": {
+      "code": {
+        "type": "string",
+        "description": "Error code"
+      },
+      "message": {
+        "type": "string",
+        "description": "Error message"
+      }
+    }
+  }
+}

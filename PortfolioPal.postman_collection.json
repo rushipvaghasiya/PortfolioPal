@@ -1,0 +1,733 @@
+{
+	"info": {
+		"_postman_id": "bbc6daac-59ef-4389-aeef-4544c04e04ac",
+		"name": "stock Portfolio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25502085"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"userEmail\": \"newUser@gmail.com\",\r\n   \"userPassword\": \"newUser@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/portfolio/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"portfolio",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"userEmail\": \"second23@gmail.com\",\r\n   \"userPassword\": \"second@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/portfolio/users/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"portfolio",
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "701"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2bd-bbXgZw0ICVqthkyowux2iNiQ7yY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Apr 2023 06:26:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Logged in\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwidXNlck5hbWUiOiJzZWNvbmRVc2VyIiwidXNlckVtYWlsIjoic2Vjb25kMjNAZ21haWwuY29tIiwidXNlclBhc3N3b3JkIjoiJDJiJDEzJFJXZWt4SU5TalBxdTdKUEdzMU9NVGU1U2lCenNPTi9oNC50N0tNd01RL0ZlSC9nS2tOMWVpIiwiaWF0IjoxNjgyNjYzMTcwLCJleHAiOjE2ODI2NjQ5NzB9.8D5kNPnQisfANuX1KjerpwMW4vTNil9ifOi07o1EzXM\",\n    \"refreshtoken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwidXNlck5hbWUiOiJzZWNvbmRVc2VyIiwidXNlckVtYWlsIjoic2Vjb25kMjNAZ21haWwuY29tIiwidXNlclBhc3N3b3JkIjoiJDJiJDEzJFJXZWt4SU5TalBxdTdKUEdzMU9NVGU1U2lCenNPTi9oNC50N0tNd01RL0ZlSC9nS2tOMWVpIiwiaWF0IjoxNjgyNjYzMTcwLCJleHAiOjE2ODMyNjc5NzB9.BIuxihDDo_f-U-_kHcvhgYIzCfLIDdEawGvXurxmMiA\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"userName\": \"newUser\",\r\n   \"userEmail\": \"newUser@gmail.com\",\r\n   \"userPassword\": \"newUser@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/portfolio/users/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"portfolio",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Token",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"userName\": \"newUser\",\r\n   \"userEmail\": \"newUser@gmail.com\",\r\n    \"refreshtoken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0NiIsInVzZXJOYW1lIjoibmV3VXNlciIsInVzZXJFbWFpbCI6Im5ld1VzZXJAZ21haWwuY29tIiwidXNlclBhc3N3b3JkIjoiJDJiJDEzJE9FSmlyMlVNYzRhVmRVTlNHSHh2di5vUE9wdlZ4ZEY2ZWlraVR2UkltYm1oZHhXZXVxaWFTIiwiaWF0IjoxNjgzMTc5ODU2LCJleHAiOjE2ODMyNjYyNTZ9.4dvB_HiHZaPkZ0NT8CEAE6m9bRJrX-AbOkVOQHHhCVY\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/portfolio/users/token",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"portfolio",
+								"users",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0NiIsInVzZXJOYW1lIjoibmV3VXNlciIsInVzZXJFbWFpbCI6Im5ld1VzZXJAZ21haWwuY29tIiwidXNlclBhc3N3b3JkIjoiJDJiJDEzJE9FSmlyMlVNYzRhVmRVTlNHSHh2di5vUE9wdlZ4ZEY2ZWlraVR2UkltYm1oZHhXZXVxaWFTIiwiaWF0IjoxNjgzMTc5ODU2LCJleHAiOjE2ODMyNjYyNTZ9.4dvB_HiHZaPkZ0NT8CEAE6m9bRJrX-AbOkVOQHHhCVY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8000/portfolio/users/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"portfolio",
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userEmail\":\"newUser@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/portfolio/users/forgot",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"portfolio",
+								"users",
+								"forgot"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RESET Password",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"13QV7XWQ35AD7314FGTJHXOPQ\",\r\n    \"userPassword\":\"Updatedpord@168745\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/portfolio/users/reset",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"portfolio",
+								"users",
+								"reset"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "stocks",
+			"item": [
+				{
+					"name": "Add stocks",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0OSIsInVzZXJOYW1lIjoibmV3VXNlciIsInVzZXJFbWFpbCI6Im5ld1VzZXJAZ21haWwuY29tIiwidXNlclBhc3N3b3JkIjoiJDJiJDEzJGIzY2FjVnJ5Tk1rV3JqcUFKaHJ6cnVSZzBiL2dmOGNwdHF6d1dZNXlRcnBqRDFHZjZrRkRhIiwiaWF0IjoxNjg0MjE2OTM1LCJleHAiOjE2ODQzMDMzMzV9.9zIQB2UQeBYDaP62XHMsmUlRzFw_3zvZLKNuPRr6Yog",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyName\": \"Jimmy Choo Plc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/portfolio/stocks/addStock?symbol=JAIDX",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"portfolio",
+								"stocks",
+								"addStock"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "JAIDX"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Stock",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0OSIsInVzZXJOYW1lIjoibmV3VXNlciIsInVzZXJFbWFpbCI6Im5ld1VzZXJAZ21haWwuY29tIiwidXNlclBhc3N3b3JkIjoiJDJiJDEzJGIzY2FjVnJ5Tk1rV3JqcUFKaHJ6cnVSZzBiL2dmOGNwdHF6d1dZNXlRcnBqRDFHZjZrRkRhIiwiaWF0IjoxNjg0MjE2OTM1LCJleHAiOjE2ODQzMDMzMzV9.9zIQB2UQeBYDaP62XHMsmUlRzFw_3zvZLKNuPRr6Yog",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/portfolio/stocks/searchStock?symbol=jai",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"portfolio",
+								"stocks",
+								"searchStock"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "jai"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stock-chart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0OSIsInVzZXJOYW1lIjoibmV3VXNlciIsInVzZXJFbWFpbCI6Im5ld1VzZXJAZ21haWwuY29tIiwidXNlclBhc3N3b3JkIjoiJDJiJDEzJGIzY2FjVnJ5Tk1rV3JqcUFKaHJ6cnVSZzBiL2dmOGNwdHF6d1dZNXlRcnBqRDFHZjZrRkRhIiwiaWF0IjoxNjgzODg0NjM0LCJleHAiOjE2ODM5NzEwMzR9.IcqcGAZiJlDbUWAJL4sCP4UWGna_iZr5kJXINNM82zk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/portfolio/stocks/stock-chart?symbol=HMAC",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"portfolio",
+								"stocks",
+								"stock-chart"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "HMAC"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "stock-chart",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/portfolio/stocks/stock-chart?symbol=ADANIPOWER.BSE",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"portfolio",
+										"stocks",
+										"stock-chart"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "ADANIPOWER.BSE"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "5429"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1535-NCIlmSBDMXTqhRgEHKAblx/BJLw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Apr 2023 13:07:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"symbolName\": \"ADANIPOWER.BSE\",\n    \"dateWise\": [\n        {\n            \"date\": \"2023-04-26\",\n            \"open\": \"205.65\",\n            \"close\": \"211.05\"\n        },\n        {\n            \"date\": \"2023-04-25\",\n            \"open\": \"200.1\",\n            \"close\": \"205.75\"\n        },\n        {\n            \"date\": \"2023-04-24\",\n            \"open\": \"198.25\",\n            \"close\": \"201.35\"\n        },\n        {\n            \"date\": \"2023-04-21\",\n            \"open\": \"199.7\",\n            \"close\": \"199.25\"\n        },\n        {\n            \"date\": \"2023-04-20\",\n            \"open\": \"188.8\",\n            \"close\": \"196.25\"\n        },\n        {\n            \"date\": \"2023-04-19\",\n            \"open\": \"187.35\",\n            \"close\": \"187.45\"\n        },\n        {\n            \"date\": \"2023-04-18\",\n            \"open\": \"189.4\",\n            \"close\": \"188.3\"\n        },\n        {\n            \"date\": \"2023-04-17\",\n            \"open\": \"188.3\",\n            \"close\": \"189.35\"\n        },\n        {\n            \"date\": \"2023-04-13\",\n            \"open\": \"192.0\",\n            \"close\": \"189.4\"\n        },\n        {\n            \"date\": \"2023-04-12\",\n            \"open\": \"195.1\",\n            \"close\": \"192.45\"\n        },\n        {\n            \"date\": \"2023-04-11\",\n            \"open\": \"194.05\",\n            \"close\": \"193.9\"\n        },\n        {\n            \"date\": \"2023-04-10\",\n            \"open\": \"193.0\",\n            \"close\": \"194.0\"\n        },\n        {\n            \"date\": \"2023-04-06\",\n            \"open\": \"190.15\",\n            \"close\": \"192.15\"\n        },\n        {\n            \"date\": \"2023-04-05\",\n            \"open\": \"190.0\",\n            \"close\": \"190.05\"\n        },\n        {\n            \"date\": \"2023-04-04\",\n            \"open\": \"190.55\",\n            \"close\": \"190.55\"\n        },\n        {\n            \"date\": \"2023-04-03\",\n            \"open\": \"195.0\",\n            \"close\": \"190.55\"\n        },\n        {\n            \"date\": \"2023-03-31\",\n            \"open\": \"189.4\",\n            \"close\": \"191.6\"\n        },\n        {\n            \"date\": \"2023-03-29\",\n            \"open\": \"166.25\",\n            \"close\": \"182.5\"\n        },\n        {\n            \"date\": \"2023-03-28\",\n            \"open\": \"179.8\",\n            \"close\": \"173.85\"\n        },\n        {\n            \"date\": \"2023-03-27\",\n            \"open\": \"195.0\",\n            \"close\": \"183.0\"\n        },\n        {\n            \"date\": \"2023-03-24\",\n            \"open\": \"201.3\",\n            \"close\": \"192.6\"\n        },\n        {\n            \"date\": \"2023-03-23\",\n            \"open\": \"202.0\",\n            \"close\": \"201.2\"\n        },\n        {\n            \"date\": \"2023-03-22\",\n            \"open\": \"202.0\",\n            \"close\": \"203.85\"\n        },\n        {\n            \"date\": \"2023-03-21\",\n            \"open\": \"192.2\",\n            \"close\": \"199.8\"\n        },\n        {\n            \"date\": \"2023-03-20\",\n            \"open\": \"194.0\",\n            \"close\": \"190.3\"\n        },\n        {\n            \"date\": \"2023-03-17\",\n            \"open\": \"203.5\",\n            \"close\": \"199.95\"\n        },\n        {\n            \"date\": \"2023-03-16\",\n            \"open\": \"201.0\",\n            \"close\": \"198.75\"\n        },\n        {\n            \"date\": \"2023-03-15\",\n            \"open\": \"194.55\",\n            \"close\": \"202.15\"\n        },\n        {\n            \"date\": \"2023-03-14\",\n            \"open\": \"217.15\",\n            \"close\": \"204.75\"\n        },\n        {\n            \"date\": \"2023-03-13\",\n            \"open\": \"214.75\",\n            \"close\": \"215.5\"\n        },\n        {\n            \"date\": \"2023-03-10\",\n            \"open\": \"194.0\",\n            \"close\": \"205.25\"\n        },\n        {\n            \"date\": \"2023-03-09\",\n            \"open\": \"196.05\",\n            \"close\": \"196.05\"\n        },\n        {\n            \"date\": \"2023-03-08\",\n            \"open\": \"185.95\",\n            \"close\": \"186.75\"\n        },\n        {\n            \"date\": \"2023-03-06\",\n            \"open\": \"177.9\",\n            \"close\": \"177.9\"\n        },\n        {\n            \"date\": \"2023-03-03\",\n            \"open\": \"169.45\",\n            \"close\": \"169.45\"\n        },\n        {\n            \"date\": \"2023-03-02\",\n            \"open\": \"161.4\",\n            \"close\": \"161.4\"\n        },\n        {\n            \"date\": \"2023-03-01\",\n            \"open\": \"153.75\",\n            \"close\": \"153.75\"\n        },\n        {\n            \"date\": \"2023-02-28\",\n            \"open\": \"137.6\",\n            \"close\": \"146.45\"\n        },\n        {\n            \"date\": \"2023-02-27\",\n            \"open\": \"142.5\",\n            \"close\": \"139.5\"\n        },\n        {\n            \"date\": \"2023-02-24\",\n            \"open\": \"150.25\",\n            \"close\": \"146.8\"\n        },\n        {\n            \"date\": \"2023-02-23\",\n            \"open\": \"156.0\",\n            \"close\": \"154.5\"\n        },\n        {\n            \"date\": \"2023-02-22\",\n            \"open\": \"177.95\",\n            \"close\": \"162.6\"\n        },\n        {\n            \"date\": \"2023-02-21\",\n            \"open\": \"167.5\",\n            \"close\": \"171.15\"\n        },\n        {\n            \"date\": \"2023-02-20\",\n            \"open\": \"159.0\",\n            \"close\": \"163.0\"\n        },\n        {\n            \"date\": \"2023-02-17\",\n            \"open\": \"151.2\",\n            \"close\": \"155.25\"\n        },\n        {\n            \"date\": \"2023-02-16\",\n            \"open\": \"141.0\",\n            \"close\": \"147.9\"\n        },\n        {\n            \"date\": \"2023-02-15\",\n            \"open\": \"140.9\",\n            \"close\": \"140.9\"\n        },\n        {\n            \"date\": \"2023-02-14\",\n            \"open\": \"148.3\",\n            \"close\": \"148.3\"\n        },\n        {\n            \"date\": \"2023-02-13\",\n            \"open\": \"156.1\",\n            \"close\": \"156.1\"\n        },\n        {\n            \"date\": \"2023-02-10\",\n            \"open\": \"164.3\",\n            \"close\": \"164.3\"\n        },\n        {\n            \"date\": \"2023-02-09\",\n            \"open\": \"172.9\",\n            \"close\": \"172.9\"\n        },\n        {\n            \"date\": \"2023-02-08\",\n            \"open\": \"172.75\",\n            \"close\": \"182.0\"\n        },\n        {\n            \"date\": \"2023-02-07\",\n            \"open\": \"173.35\",\n            \"close\": \"173.35\"\n        },\n        {\n            \"date\": \"2023-02-06\",\n            \"open\": \"182.45\",\n            \"close\": \"182.45\"\n        },\n        {\n            \"date\": \"2023-02-03\",\n            \"open\": \"192.05\",\n            \"close\": \"192.05\"\n        },\n        {\n            \"date\": \"2023-02-02\",\n            \"open\": \"202.15\",\n            \"close\": \"202.15\"\n        },\n        {\n            \"date\": \"2023-02-01\",\n            \"open\": \"216.15\",\n            \"close\": \"212.75\"\n        },\n        {\n            \"date\": \"2023-01-31\",\n            \"open\": \"223.9\",\n            \"close\": \"223.9\"\n        },\n        {\n            \"date\": \"2023-01-30\",\n            \"open\": \"235.65\",\n            \"close\": \"235.65\"\n        },\n        {\n            \"date\": \"2023-01-27\",\n            \"open\": \"248.8\",\n            \"close\": \"248.05\"\n        },\n        {\n            \"date\": \"2023-01-25\",\n            \"open\": \"272.5\",\n            \"close\": \"261.1\"\n        },\n        {\n            \"date\": \"2023-01-24\",\n            \"open\": \"273.05\",\n            \"close\": \"274.8\"\n        },\n        {\n            \"date\": \"2023-01-23\",\n            \"open\": \"275.3\",\n            \"close\": \"273.25\"\n        },\n        {\n            \"date\": \"2023-01-20\",\n            \"open\": \"277.0\",\n            \"close\": \"275.0\"\n        },\n        {\n            \"date\": \"2023-01-19\",\n            \"open\": \"276.1\",\n            \"close\": \"277.9\"\n        },\n        {\n            \"date\": \"2023-01-18\",\n            \"open\": \"281.7\",\n            \"close\": \"278.7\"\n        },\n        {\n            \"date\": \"2023-01-17\",\n            \"open\": \"274.8\",\n            \"close\": \"281.8\"\n        },\n        {\n            \"date\": \"2023-01-16\",\n            \"open\": \"282.95\",\n            \"close\": \"273.2\"\n        },\n        {\n            \"date\": \"2023-01-13\",\n            \"open\": \"273.75\",\n            \"close\": \"278.7\"\n        },\n        {\n            \"date\": \"2023-01-12\",\n            \"open\": \"276.4\",\n            \"close\": \"273.55\"\n        },\n        {\n            \"date\": \"2023-01-11\",\n            \"open\": \"282.0\",\n            \"close\": \"276.3\"\n        },\n        {\n            \"date\": \"2023-01-10\",\n            \"open\": \"286.5\",\n            \"close\": \"279.4\"\n        },\n        {\n            \"date\": \"2023-01-09\",\n            \"open\": \"286.0\",\n            \"close\": \"287.6\"\n        },\n        {\n            \"date\": \"2023-01-06\",\n            \"open\": \"289.15\",\n            \"close\": \"283.4\"\n        },\n        {\n            \"date\": \"2023-01-05\",\n            \"open\": \"286.9\",\n            \"close\": \"288.8\"\n        },\n        {\n            \"date\": \"2023-01-04\",\n            \"open\": \"295.0\",\n            \"close\": \"286.85\"\n        },\n        {\n            \"date\": \"2023-01-03\",\n            \"open\": \"298.2\",\n            \"close\": \"294.8\"\n        },\n        {\n            \"date\": \"2023-01-02\",\n            \"open\": \"300.6\",\n            \"close\": \"298.15\"\n        },\n        {\n            \"date\": \"2022-12-30\",\n            \"open\": \"304.7\",\n            \"close\": \"299.4\"\n        },\n        {\n            \"date\": \"2022-12-29\",\n            \"open\": \"305.0\",\n            \"close\": \"304.45\"\n        },\n        {\n            \"date\": \"2022-12-28\",\n            \"open\": \"292.0\",\n            \"close\": \"303.55\"\n        },\n        {\n            \"date\": \"2022-12-27\",\n            \"open\": \"275.0\",\n            \"close\": \"289.1\"\n        },\n        {\n            \"date\": \"2022-12-26\",\n            \"open\": \"249.15\",\n            \"close\": \"275.35\"\n        },\n        {\n            \"date\": \"2022-12-23\",\n            \"open\": \"265.5\",\n            \"close\": \"262.25\"\n        },\n        {\n            \"date\": \"2022-12-22\",\n            \"open\": \"290.0\",\n            \"close\": \"276.05\"\n        },\n        {\n            \"date\": \"2022-12-21\",\n            \"open\": \"306.05\",\n            \"close\": \"290.55\"\n        },\n        {\n            \"date\": \"2022-12-20\",\n            \"open\": \"307.6\",\n            \"close\": \"305.8\"\n        },\n        {\n            \"date\": \"2022-12-19\",\n            \"open\": \"308.25\",\n            \"close\": \"305.75\"\n        },\n        {\n            \"date\": \"2022-12-16\",\n            \"open\": \"313.95\",\n            \"close\": \"308.25\"\n        },\n        {\n            \"date\": \"2022-12-15\",\n            \"open\": \"320.0\",\n            \"close\": \"315.45\"\n        },\n        {\n            \"date\": \"2022-12-14\",\n            \"open\": \"323.0\",\n            \"close\": \"319.4\"\n        },\n        {\n            \"date\": \"2022-12-13\",\n            \"open\": \"310.0\",\n            \"close\": \"323.5\"\n        },\n        {\n            \"date\": \"2022-12-12\",\n            \"open\": \"313.55\",\n            \"close\": \"310.3\"\n        },\n        {\n            \"date\": \"2022-12-09\",\n            \"open\": \"323.0\",\n            \"close\": \"316.0\"\n        },\n        {\n            \"date\": \"2022-12-08\",\n            \"open\": \"325.05\",\n            \"close\": \"323.4\"\n        },\n        {\n            \"date\": \"2022-12-07\",\n            \"open\": \"325.25\",\n            \"close\": \"324.35\"\n        },\n        {\n            \"date\": \"2022-12-06\",\n            \"open\": \"320.35\",\n            \"close\": \"325.3\"\n        },\n        {\n            \"date\": \"2022-12-05\",\n            \"open\": \"324.2\",\n            \"close\": \"323.0\"\n        },\n        {\n            \"date\": \"2022-12-02\",\n            \"open\": \"328.55\",\n            \"close\": \"325.35\"\n        },\n        {\n            \"date\": \"2022-12-01\",\n            \"open\": \"337.05\",\n            \"close\": \"330.3\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Stocks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0OSIsInVzZXJOYW1lIjoibmV3VXNlciIsInVzZXJFbWFpbCI6Im5ld1VzZXJAZ21haWwuY29tIiwidXNlclBhc3N3b3JkIjoiJDJiJDEzJGIzY2FjVnJ5Tk1rV3JqcUFKaHJ6cnVSZzBiL2dmOGNwdHF6d1dZNXlRcnBqRDFHZjZrRkRhIiwiaWF0IjoxNjg0MjE3MjA0LCJleHAiOjE2ODQzMDM2MDR9.wmgyau1l8FECzyWE_fVm4ye9wQESzkWyHhgxnAZXVbs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/portfolio/stocks/getStocks",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"portfolio",
+								"stocks",
+								"getStocks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Stocks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/stock-portfolio/stocks/getStocks/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"stock-portfolio",
+										"stocks",
+										"getStocks",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "509"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1fd-JRm07FibQtBry3qY6vWwt7hjkxA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Apr 2023 04:06:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"stockId\": \"3\",\n        \"symbol\": \"ADANIPOWER.BSE\",\n        \"companyName\": \"ADANI POWER LTD.\",\n        \"price\": \"201\",\n        \"open\": \"198\",\n        \"high\": \"203\",\n        \"low\": \"194\",\n        \"createAt\": \"2023-04-25T06:35:37.558Z\"\n    },\n    {\n        \"stockId\": \"7\",\n        \"symbol\": \"KIRANVYPAR.BSE\",\n        \"companyName\": \"Kiran Vyapar Ltd\",\n        \"price\": \"145\",\n        \"open\": \"145\",\n        \"high\": \"145\",\n        \"low\": \"142\",\n        \"createAt\": \"2023-04-26T01:59:46.694Z\"\n    },\n    {\n        \"stockId\": \"8\",\n        \"symbol\": \"JAIDX\",\n        \"companyName\": \"AMERICAN ASSET ALLOCATION TRUST SERIES III\",\n        \"price\": \"20\",\n        \"open\": \"10\",\n        \"high\": \"10\",\n        \"low\": \"10\",\n        \"createAt\": \"2023-04-26T02:02:16.916Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Delete Stock",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0OSIsInVzZXJOYW1lIjoibmV3VXNlciIsInVzZXJFbWFpbCI6Im5ld1VzZXJAZ21haWwuY29tIiwidXNlclBhc3N3b3JkIjoiJDJiJDEzJGIzY2FjVnJ5Tk1rV3JqcUFKaHJ6cnVSZzBiL2dmOGNwdHF6d1dZNXlRcnBqRDFHZjZrRkRhIiwiaWF0IjoxNjg0MjE3MjA0LCJleHAiOjE2ODQzMDM2MDR9.wmgyau1l8FECzyWE_fVm4ye9wQESzkWyHhgxnAZXVbs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/portfolio/stocks/deleteStock?symbol=HMAC",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"portfolio",
+								"stocks",
+								"deleteStock"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "HMAC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Trigger",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0OSIsInVzZXJOYW1lIjoibmV3VXNlciIsInVzZXJFbWFpbCI6Im5ld1VzZXJAZ21haWwuY29tIiwidXNlclBhc3N3b3JkIjoiJDJiJDEzJGIzY2FjVnJ5Tk1rV3JqcUFKaHJ6cnVSZzBiL2dmOGNwdHF6d1dZNXlRcnBqRDFHZjZrRkRhIiwiaWF0IjoxNjgzODg0NjM0LCJleHAiOjE2ODM5NzEwMzR9.IcqcGAZiJlDbUWAJL4sCP4UWGna_iZr5kJXINNM82zk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\": \"High\",\r\n    \"alertPrice\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/portfolio/stocks/addTrigger/56",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"portfolio",
+								"stocks",
+								"addTrigger",
+								"56"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Triggers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0OSIsInVzZXJOYW1lIjoibmV3VXNlciIsInVzZXJFbWFpbCI6Im5ld1VzZXJAZ21haWwuY29tIiwidXNlclBhc3N3b3JkIjoiJDJiJDEzJGIzY2FjVnJ5Tk1rV3JqcUFKaHJ6cnVSZzBiL2dmOGNwdHF6d1dZNXlRcnBqRDFHZjZrRkRhIiwiaWF0IjoxNjgzODg0NjM0LCJleHAiOjE2ODM5NzEwMzR9.IcqcGAZiJlDbUWAJL4sCP4UWGna_iZr5kJXINNM82zk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/portfolio/stocks/getTriggers",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"portfolio",
+								"stocks",
+								"getTriggers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Triggers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/stock-portfolio/stocks/getTriggers",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"stock-portfolio",
+										"stocks",
+										"getTriggers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "243"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f3-w/r/x6WyqX48n0Gp7sCEy3Nmoo0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Apr 2023 05:15:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"triggerId\": \"10\",\n        \"lowPrice\": \"5\",\n        \"highPrice\": \"20\",\n        \"symbol\": \"KIRANVYPAR.BSE\",\n        \"userName\": \"First\",\n        \"userEmail\": \"first@gmail.com\"\n    },\n    {\n        \"triggerId\": \"6\",\n        \"lowPrice\": \"9\",\n        \"highPrice\": \"20\",\n        \"symbol\": \"JAIDX\",\n        \"userName\": \"First\",\n        \"userEmail\": \"first@gmail.com\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Delete Trigger",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0OSIsInVzZXJOYW1lIjoibmV3VXNlciIsInVzZXJFbWFpbCI6Im5ld1VzZXJAZ21haWwuY29tIiwidXNlclBhc3N3b3JkIjoiJDJiJDEzJGIzY2FjVnJ5Tk1rV3JqcUFKaHJ6cnVSZzBiL2dmOGNwdHF6d1dZNXlRcnBqRDFHZjZrRkRhIiwiaWF0IjoxNjgzODg0NjM0LCJleHAiOjE2ODM5NzEwMzR9.IcqcGAZiJlDbUWAJL4sCP4UWGna_iZr5kJXINNM82zk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/portfolio/stocks/deleteTrigger/56",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"portfolio",
+								"stocks",
+								"deleteTrigger",
+								"56"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Stock Analysis",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0OSIsInVzZXJOYW1lIjoibmV3VXNlciIsInVzZXJFbWFpbCI6Im5ld1VzZXJAZ21haWwuY29tIiwidXNlclBhc3N3b3JkIjoiJDJiJDEzJGIzY2FjVnJ5Tk1rV3JqcUFKaHJ6cnVSZzBiL2dmOGNwdHF6d1dZNXlRcnBqRDFHZjZrRkRhIiwiaWF0IjoxNjgzODg0NjM0LCJleHAiOjE2ODM5NzEwMzR9.IcqcGAZiJlDbUWAJL4sCP4UWGna_iZr5kJXINNM82zk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/portfolio/stocks/getStockAnalysis?symbol=HMAC",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"portfolio",
+								"stocks",
+								"getStockAnalysis"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "HMAC"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

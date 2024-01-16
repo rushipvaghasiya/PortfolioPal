@@ -1,0 +1,198 @@
+{
+  "searchStock": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "symbol": {
+          "type": "string",
+          "example": "AFIAX"
+        },
+        "companyName": {
+          "type": "string",
+          "example": "AMERICAFIRST QUANTITATIVE STRATEGIES FUND CLASS A"
+        }
+      }
+    }
+  },
+  "addStock": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "Successfully New stock added"
+      }
+    }
+  },
+  "stock-chart": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "symbolName": {
+          "type": "string",
+          "example": "AFISX"
+        },
+        "dateWise": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": {
+                "type": "string",
+                "example": "2020-02-06"
+              },
+              "open": {
+                "type": "string",
+                "example": "6.07"
+              },
+              "close": {
+                "type": "string",
+                "example": "6.07"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "getStocks": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "stockId": {
+          "type": "string",
+          "example": "27"
+        },
+        "symbol": {
+          "type": "string",
+          "example": "AFISX"
+        },
+        "companyName": {
+          "type": "string",
+          "example": "AMERICAFIRST QUANTITATIVE STRATEGIES FUND CLASS C"
+        },
+        "price": {
+          "type": "string",
+          "example": "6"
+        },
+        "open": {
+          "type": "string",
+          "example": "6"
+        },
+        "high": {
+          "type": "string",
+          "example": "6"
+        },
+        "low": {
+          "type": "string",
+          "example": "6"
+        },
+        "createAt": {
+          "type": "string",
+          "example": "2023-05-01T01:37:24.207Z"
+        }
+      }
+    }
+  },
+  "getStockAnalysis": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "10DayAverageTradingVolume": {
+          "type": "number",
+          "example": 0.00345
+        },
+        "3MonthAverageTradingVolume": {
+          "type": "number",
+          "example": 0.05289
+        },
+        "52WeekHigh": {
+          "type": "number",
+          "example": 10.62
+        },
+        "52WeekHighDate": {
+          "type": "string",
+          "example": "2023-02-07"
+        },
+        "52WeekLow": {
+          "type": "number",
+          "example": 9.94
+        },
+        "52WeekLowDate": {
+          "type": "string",
+          "example": "2022-09-16"
+        }
+      }
+    }
+  },
+  "deleteStock": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "Stock successfully deleted"
+      }
+    }
+  },
+  "addTrigger": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "Successfully trigger added"
+      }
+    }
+  },
+  "getTriggers": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "triggerId": {
+          "type": "string",
+          "example": "22"
+        },
+        "stockId": {
+          "type": "string",
+          "example": "27"
+        },
+        "category": {
+          "type": "string",
+          "example": "High"
+        },
+        "alertPrice": {
+          "type": "string",
+          "example": "6"
+        },
+        "symbol": {
+          "type": "string",
+          "example": "AFISX"
+        },
+        "companyName": {
+          "type": "string",
+          "example": "AMERICAFIRST QUANTITATIVE STRATEGIES FUND CLASS C"
+        },
+        "userName": {
+          "type": "string",
+          "example": "secondUser"
+        },
+        "userEmail": {
+          "type": "string",
+          "example": "second23@gmail.com"
+        }
+      }
+    }
+  },
+  "deleteTrigger": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "Successfully Trigger Deleted"
+      }
+    }
+  }
+}

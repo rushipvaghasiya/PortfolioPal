@@ -1,0 +1,92 @@
+{
+    "register": {
+        "type": "object",
+        "required": [
+            "userName",
+            "userEmail",
+            "userPassword"
+        ],
+        "properties": {
+            "userName": {
+                "type": "string",
+                "example": "thirdUser"
+            },
+            "userEmail": {
+                "type": "string",
+                "example": "third23@gmail.com"
+            },
+            "userPassword": {
+                "type": "string",
+                "example": "xyz@123"
+            }
+        }
+    },
+    "login": {
+        "type": "object",
+        "required": [
+            "userEmail",
+            "userPassword"
+        ],
+        "properties": {
+            "userEmail": {
+                "type": "string",
+                "example": "third23@gmail.com"
+            },
+            "userPassword": {
+                "type": "string",
+                "example": "xyz@123"
+            }
+        }
+    },
+    "token": {
+        "type": "object",
+        "required":[
+            "userName", 
+            "userEmail", 
+            "refreshToken"
+        ],
+        "properties": {
+            "userName": {
+                "type": "string",
+                "example": "secondUser"
+            },
+            "userEmail": {
+                "type": "string",
+                "example": "second@gmail.com"
+            },
+            "refreshToken": {
+                "type": "string",
+                "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3"
+            }
+        }
+    },
+    "forgot": {
+        "type": "object",
+        "required": [
+            "userEmail"
+        ],
+        "properties": {
+            "userEmail": {
+                "type": "string",
+                "example": "second@gmail.com"
+            }
+        }
+    },
+    "reset":{
+        "type": "object",
+        "required": [
+            "token", 
+            "userPassword"
+        ],
+        "properties": {
+          "token": {
+            "type": "string",
+            "example": "1DYVA7ZCG8N2VV12B4A9GID2Y"
+          },
+          "userPassword": {
+            "type": "string",
+            "example": "xyz@344"
+          }
+        }
+    }
+}

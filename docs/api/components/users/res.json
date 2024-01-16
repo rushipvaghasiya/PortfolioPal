@@ -1,0 +1,64 @@
+{
+    "register": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "User created successfully"
+          }
+        }
+    },
+    "login":{
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "example": "Logged in"
+          },
+          "token":{
+            "type": "string",
+            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+          },
+          "refreshToken":{
+            "type": "string",
+            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3Iiwid"
+          }
+        } 
+    },
+    "token": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string",
+            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+           }
+        }
+    },
+    "forgot": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "Email sent"
+           }
+        }
+    },
+    "reset": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "Password reset successfully"
+           }
+        }
+    },
+    "logout": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "You have been Logged Out"
+           }
+        }
+    }
+}
