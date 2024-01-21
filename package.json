@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "lint": ".\\node_modules\\.bin\\eslint **/*.js",
     "test": "nyc --reporter=text mocha --timeout 20000 --watch-extensions js './src/component/**/*.test.js' --exit",
     "test:watch": "mocha --watch ./src/component/**/*.test.js",
     "coverage": "nyc --reporter=text --reporter=lcov npm test",
